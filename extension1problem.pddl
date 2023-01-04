@@ -27,9 +27,4 @@
 )
 
 (:goal (forall (?p - pedido) (not(pendiente ?p))))
-;(:goal 
-;    (and (pedido_loc p1 B1) (pedido_loc p2 B5) (pedido_loc p3 B9) (pedido_loc p4 B9) (pedido_loc p5 B6)
-;    (pedido_loc p6 B10) (pedido_loc p7 B10) (pedido_loc p8 B4) (pedido_loc p9 B5) (pedido_loc p10 B6)
-;    (pedido_loc p11 B8) (pedido_loc p12 B9) (pedido_loc p13 B1) (pedido_loc p14 B4) (pedido_loc p15 B1)
-;))
 )
