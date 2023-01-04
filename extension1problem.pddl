@@ -1,12 +1,19 @@
-(define (problem MartePorb)
-  (:domain MarteDominio)
+(define (problem Extension1prob)
+  (:domain Extension1)
 (:objects
     ROV1 ROV2 ROV3 ROV4 - rover
+    r11 r12 r21 r22 r31 r32 r41 r42 - slot
     B1 B2 B3 B4 B5 B6 B7 B8 B9 B10 - base
-    p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14 p15 - pedido
+    p1 p2 p3 p4 p5 p6 p7 p8 - ped_suministro
+    p9 p10 p11 p12 p13 p14 p15 - ped_persona
 )
 (:init
     (estacionado ROV1 B4) (estacionado ROV2 B1) (estacionado ROV3 B10) (estacionado ROV4 B6)
+
+    (dentro r11 ROV1) (dentro r12 ROV1)  (dentro r21 ROV2)  (dentro r22 ROV2)  
+    (dentro r31 ROV3)  (dentro r32 ROV3)  (dentro r41 ROV4)  (dentro r42 ROV4)  
+
+    (vacio r11) (vacio r12) (vacio r21) (vacio r22) (vacio r31) (vacio r32) (vacio r41) (vacio r42)
 
     (pendiente p1) (pendiente p2) (pendiente p3) (pendiente p4) (pendiente p5) (pendiente p6) 
     (pendiente p7) (pendiente p8) (pendiente p9) (pendiente p10) (pendiente p11) (pendiente p12)
