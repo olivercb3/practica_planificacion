@@ -1,4 +1,5 @@
-(define (problem marte1) (:domain Marte)
+(define (problem MartePorb)
+  (:domain MarteDominio)
 (:objects
     ROV1 ROV2 ROV3 ROV4 - rover
     B1 B2 B3 B4 B5 B6 B7 B8 B9 B10 - base
@@ -30,5 +31,4 @@
     (pedido_loc p6 B10) (pedido_loc p7 B10) (pedido_loc p8 B4) (pedido_loc p9 B5) (pedido_loc p10 B6)
     (pedido_loc p11 B8) (pedido_loc p12 B9) (pedido_loc p13 B1) (pedido_loc p14 B4) (pedido_loc p15 B1)
 ))
-
 )
