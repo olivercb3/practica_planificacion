@@ -1,8 +1,8 @@
-(define (problem extension2problem_minimizar2)
-  (:domain extension2_minimizar)
+(define (problem extension3problem)
+  (:domain extension3)
 (:objects
     ROV1 ROV2 - rover
-    B1 B2 B3 B4 B5 - base
+    B1 B2 B3 - base
     p1 p2 - ped_persona
     p3 p4 - ped_suministro
 )
@@ -12,7 +12,9 @@
 
     (= (gasolina ROV1) 7) (= (gasolina ROV2) 7)
 
-    (= (gasolina-gastada) 0)
+    (= (prioridad p1) 3) (= (prioridad p2) 2) (= (prioridad p3) 2) (= (prioridad p4) 1)
+
+    (= (prioridades-servidas) 0)
 
     (estacionado ROV1 B1) (estacionado ROV2 B3) 
 
@@ -22,11 +24,10 @@
 
     (pedido_dest p1 B3) (pedido_dest p2 B3) (pedido_dest p3 B3) (pedido_dest p4 B3)
 
-    (vecino B1 B2) (vecino B2 B1) (vecino B2 B3) (vecino B3 B2) 
-    (vecino B1 B4) (vecino B4 B1) (vecino B4 B5) (vecino B5 B4) (vecino B5 B3) (vecino B3 B1)
+    (vecino B1 B2) (vecino B2 B1) (vecino B2 B3) (vecino B3 B2)
 )
 
-(:metric minimize (gasolina-gastada))
+(:metric maximize (prioridades-servidas))
 
 (:goal (forall (?p - pedido) (not(pendiente ?p))))
 )
