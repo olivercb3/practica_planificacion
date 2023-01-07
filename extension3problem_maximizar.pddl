@@ -29,7 +29,7 @@
     (vecino B1 B2) (vecino B2 B1) (vecino B2 B3) (vecino B3 B2)
 )
 
-(:metric maximize(+ (* -1 (gasolina-gastada)) (* 1 (prioridades-servidas)) ))
-
 (:goal (forall (?p - pedido) (not(pendiente ?p))))
+
+(:metric maximize(+ (* -1 (gasolina-gastada)) (* 1 (prioridades-servidas)) ))
 )

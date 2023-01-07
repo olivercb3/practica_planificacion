@@ -1,5 +1,5 @@
-(define (problem extension2problem)
-  (:domain extension2)
+(define (problem extension3problem2)
+  (:domain extension3)
 (:objects
     ROV1 ROV2 - rover
     B1 B2 B3 - base
@@ -9,10 +9,14 @@
 
     (= (carga ROV1) 0) (= (carga ROV2) 0)
 
-    (= (gasolina ROV1) 10) (= (gasolina ROV2) 10)
+    (= (gasolina ROV1) 7) (= (gasolina ROV2) 7)
 
-    (estacionado ROV1 B1) (estacionado ROV2 B3) 
+    (= (prioridad p3) 1) (= (prioridad p4) 3)
 
+    (= (prioridades-servidas) 0)
+
+    (estacionado ROV1 B1) (estacionado ROV2 B3)
+     
     (pendiente p3) (pendiente p4)
 
     (pedido_loc p3 B1) (pedido_loc p4 B1)
@@ -23,4 +27,6 @@
 )
 
 (:goal (forall (?p - pedido) (not(pendiente ?p))))
+
+(:metric maximize (prioridades-servidas))
 )

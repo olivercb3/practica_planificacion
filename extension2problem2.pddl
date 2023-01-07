@@ -10,7 +10,7 @@
 
     (= (carga ROV1) 0) (= (carga ROV2) 0)
 
-    (= (gasolina ROV1) 7) (= (gasolina ROV2) 7)
+    (= (gasolina ROV1) 30) (= (gasolina ROV2) 30)
 
     (estacionado ROV1 B1) (estacionado ROV2 B3) 
 
@@ -21,7 +21,7 @@
     (pedido_dest p1 B3) (pedido_dest p2 B3) (pedido_dest p3 B3) (pedido_dest p4 B3)
 
     (vecino B1 B2) (vecino B2 B1) (vecino B2 B3) (vecino B3 B2) 
-    (vecino B1 B4) (vecino B4 B1) (vecino B4 B5) (vecino B5 B4) (vecino B5 B3) (vecino B3 B1)
+    (vecino B1 B4) (vecino B4 B1) (vecino B4 B5) (vecino B5 B4) (vecino B5 B3) (vecino B3 B5)
 )
 
 (:goal (forall (?p - pedido) (not(pendiente ?p))))

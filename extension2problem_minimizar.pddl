@@ -10,7 +10,7 @@
 
     (= (carga ROV1) 0) (= (carga ROV2) 0)
 
-    (= (gasolina ROV1) 7) (= (gasolina ROV2) 7)
+    (= (gasolina ROV1) 10) (= (gasolina ROV2) 10)
 
     (= (gasolina-gastada) 0)
 
@@ -25,7 +25,7 @@
     (vecino B1 B2) (vecino B2 B1) (vecino B2 B3) (vecino B3 B2)
 )
 
-(:metric minimize (gasolina-gastada))
-
 (:goal (forall (?p - pedido) (not(pendiente ?p))))
+
+(:metric minimize (gasolina-gastada))
 )
