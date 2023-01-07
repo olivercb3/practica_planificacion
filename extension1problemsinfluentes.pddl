@@ -1,5 +1,5 @@
-(define (problem Extension1prob)
-  (:domain Extension1)
+(define (problem Extension1probsinflu)
+  (:domain Extension1sinflu)
 (:objects
     ROV1 ROV2 ROV3 ROV4 - rover
     r11 r12 r21 r22 r31 r32 r41 r42 - slot

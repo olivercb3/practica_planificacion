@@ -1,4 +1,4 @@
-(define (domain Extension1)
+(define (domain Extension1sinflu)
 
     (:requirements :strips :adl :typing)
 
