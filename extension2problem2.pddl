@@ -2,15 +2,18 @@
   (:domain extension2)
 (:objects
     ROV1 ROV2 - rover
+    r11 r12 r21 r22 - slot
     B1 B2 B3 B4 B5 - base
     p1 p2 - ped_persona
     p3 p4 - ped_suministro
 )
 (:init
 
-    (= (carga ROV1) 0) (= (carga ROV2) 0)
-
     (= (gasolina ROV1) 30) (= (gasolina ROV2) 30)
+    
+    (dentro r11 ROV1) (dentro r12 ROV1)  (dentro r21 ROV2)  (dentro r22 ROV2)
+
+    (vacio r11) (vacio r12) (vacio r21) (vacio r22)  
 
     (estacionado ROV1 B1) (estacionado ROV2 B3) 
 
