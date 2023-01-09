@@ -11,7 +11,7 @@
 )
 (:init
 
-    (= (gasolina ROV1) 15) (= (gasolina ROV2) 15)
+    (= (gasolina ROV1) 10) (= (gasolina ROV2) 10)
     
     (dentro r11 ROV1) (dentro r12 ROV1)  (dentro r21 ROV2)  (dentro r22 ROV2)  
 
