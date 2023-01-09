@@ -1,6 +1,6 @@
-(define (domain extension2)
+(define (domain Extension1_copia)
 
-    (:requirements :strips :adl :typing :equality :fluents)
+    (:requirements :strips :adl :typing :equality)
 
     (:types lugar pedido rover - object
             slot base - lugar 
@@ -17,10 +17,6 @@
                     (lleva_suministro ?rov - rover)
                     (vacio ?s - slot)
                     (dentro ?s - slot ?rov - rover)
-    )
-    
-    (:functions
-        (gasolina ?rov -rover)
     )
 
     (:action cargar_pedido_suministro
@@ -45,6 +41,6 @@
     (:action mover_rover
      :parameters (?rov - rover ?b1 - base ?b2 - base)
      :precondition (and (estacionado ?rov ?b1) (vecino ?b1 ?b2))
-     :effect (and (estacionado ?rov ?b2) (not(estacionado ?rov ?b1)) (decrease (gasolina ?rov) 1))
+     :effect (and (estacionado ?rov ?b2) (not(estacionado ?rov ?b1)))
     )
 )

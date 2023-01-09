@@ -1,5 +1,5 @@
-(define (problem extension2problem)
-  (:domain extension2)
+(define (problem Extension1problem_copia)
+  (:domain Extension1_copia)
 (:objects
     ROV1 ROV2 - rover
     r11 r12 r21 r22 - slot
@@ -10,9 +10,7 @@
     suministro1 suministro2 - suministro
 )
 (:init
-
-    (= (gasolina ROV1) 15) (= (gasolina ROV2) 15)
-    
+      
     (dentro r11 ROV1) (dentro r12 ROV1)  (dentro r21 ROV2)  (dentro r22 ROV2)  
 
     (vacio r11) (vacio r12) (vacio r21) (vacio r22)
